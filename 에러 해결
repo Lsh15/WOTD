@@ -8,4 +8,7 @@ android {
     }
 }
 
+※ 2.
+에러 발생 문구 : Installation did not succeed. The application could not be installed: INSTALL_PARSE_FAILED_MANIFEST_MALFORMED
+해결 방법 : <activity 에 android:exported="true" 추가
 
