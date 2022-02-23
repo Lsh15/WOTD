@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.ktx.Firebase
+//import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
     fun signinAndSignup(){
         auth?.createUserWithEmailAndPassword(email_edittext.text.toString(),password_edittext.text.toString())
             ?.addOnCompleteListener {
-            task ->
+                    task ->
                 if (task.isSuccessful){
 //                    Creating a user account
                     moveMainPage(task.result.user)
@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
 //                    Login if you have Account
                     signinEmail()
                 }
-        }
+            }
     }
     fun signinEmail(){
         auth?.signInWithEmailAndPassword(email_edittext.text.toString(),password_edittext.text.toString())

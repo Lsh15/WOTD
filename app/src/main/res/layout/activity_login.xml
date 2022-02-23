@@ -78,14 +78,13 @@
             android:textColor="@color/colorWhite" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button3"
+            android:id="@+id/google_signin_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="80dp"
             android:background="@drawable/btn_signin_google"
-            android:inputType="textPassword"
             android:text="@string/signin_google"
             android:textColor="@color/colorWhite" />
     </LinearLayout>
