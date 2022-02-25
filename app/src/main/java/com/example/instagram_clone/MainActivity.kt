@@ -1,13 +1,15 @@
 package com.example.instagram_clone
 
-import androidx.appcompat.app.AppCompatActivity
+import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import com.example.instagram_clone.navigation.AlarmFragment
-import com.example.instagram_clone.navigation.DetailViewFragment
-import com.example.instagram_clone.navigation.GridFragment
-import com.example.instagram_clone.navigation.UserFragment
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import com.example.instagram_clone.navigation.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,6 +18,9 @@ class MainActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         bottom_navigation.setOnNavigationItemSelectedListener(this)
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),1)
+        bottom_navigation.selectedItemId = R.id.action_home
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -33,6 +38,10 @@ class MainActivity : AppCompatActivity() , BottomNavigationView.OnNavigationItem
                 return true
             }
             R.id.action_add_photo -> {
+                if (ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED)
+                {
+                    startActivity(Intent(this,AddPhotoActivity::class.java))
+                }
                 return true
             }
             R.id.action_favorite_alarm -> {
