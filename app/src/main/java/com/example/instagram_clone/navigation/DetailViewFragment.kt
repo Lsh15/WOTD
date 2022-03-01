@@ -33,14 +33,14 @@ class DetailViewFragment : Fragment() {
     var firestore: FirebaseFirestore? = null
     var imagesSnapshot: ListenerRegistration? = null
     var okHttpClient: OkHttpClient? = null
-    var fcmPush: FcmPush? = null
+//    var fcmPush: FcmPush? = null
     var mainView: View? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         user = FirebaseAuth.getInstance().currentUser
         firestore = FirebaseFirestore.getInstance()
         okHttpClient = OkHttpClient()
-        fcmPush = FcmPush()
+//        fcmPush = FcmPush()
 
         //리사이클러 뷰와 어뎁터랑 연결
         mainView = inflater.inflate(R.layout.fragment_detail, container, false)
@@ -164,12 +164,12 @@ class DetailViewFragment : Fragment() {
             //좋아요 카운터 설정
             viewHolder.detailviewitem_favoritecounter_textview.text = "좋아요 " + contentDTOs[position].favoriteCount + "개"
 
-            viewHolder.detailviewitem_comment_imageview.setOnClickListener {
-                val intent = Intent(activity, CommentActivity::class.java)
-                intent.putExtra("contentUid", contentUidList[position])
-                intent.putExtra("destinationUid", contentDTOs[position].uid)
-                startActivity(intent)
-            }
+//            viewHolder.detailviewitem_comment_imageview.setOnClickListener {
+//                val intent = Intent(activity, CommentActivity::class.java)
+//                intent.putExtra("contentUid", contentUidList[position])
+//                intent.putExtra("destinationUid", contentDTOs[position].uid)
+//                startActivity(intent)
+//            }
 
         }
 
@@ -184,7 +184,7 @@ class DetailViewFragment : Fragment() {
 
             FirebaseFirestore.getInstance().collection("alarms").document().set(alarmDTO)
             var message = user?.email + getString(R.string.alarm_favorite)
-            fcmPush?.sendMessage(destinationUid, "알림 메세지 입니다.", message)
+//            fcmPush?.sendMessage(destinationUid, "알림 메세지 입니다.", message)
         }
 
         override fun getItemCount(): Int {
