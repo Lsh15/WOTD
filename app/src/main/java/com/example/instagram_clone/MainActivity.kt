@@ -66,15 +66,15 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         toolbar_title_image.visibility = View.VISIBLE
     }
     fun registerPushToken(){
-        FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener {
-                task ->
-            val token = task.result?.token
-            val uid = FirebaseAuth.getInstance().currentUser?.uid
-            val map = mutableMapOf<String,Any>()
-            map["pushToken"] = token!!
-
-            FirebaseFirestore.getInstance().collection("pushtokens").document(uid!!).set(map)
-        }
+//        FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener {
+//                task ->
+//            val token = task.result?.token
+//            val uid = FirebaseAuth.getInstance().currentUser?.uid
+//            val map = mutableMapOf<String,Any>()
+//            map["pushToken"] = token!!
+//
+//            FirebaseFirestore.getInstance().collection("pushtokens").document(uid!!).set(map)
+//        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
