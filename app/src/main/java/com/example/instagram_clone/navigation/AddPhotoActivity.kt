@@ -66,7 +66,6 @@ class AddPhotoActivity : AppCompatActivity() {
                 photoUri = data?.data
                 add_photo_image.setImageURI(data?.data)
             }
-
             else{
                 finish()
             }

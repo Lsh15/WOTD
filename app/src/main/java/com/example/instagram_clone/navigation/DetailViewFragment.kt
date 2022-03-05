@@ -54,7 +54,7 @@ class DetailViewFragment : Fragment() {
         mainView?.detailviewfragment_recyclerview?.layoutManager = LinearLayoutManager(activity)
         mainView?.detailviewfragment_recyclerview?.adapter = DetailRecyclerViewAdapter()
         var mainActivity = activity as MainActivity
-        mainActivity.progress_bar.visibility = View.INVISIBLE
+//        mainActivity.progress_bar.visibility = View.INVISIBLE //에러 발생
 
     }
 
