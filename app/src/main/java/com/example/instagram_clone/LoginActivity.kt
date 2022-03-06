@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
                     task ->
                 if (task.isSuccessful){
 //                    Creating a user account
-                    moveMainPage(task.result.user)
+                    moveMainPage(task.result?.user)
                 }
                 else{
 //                    Login if you have Account
@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
                     task ->
                 if (task.isSuccessful){
 //                    Login
-                    moveMainPage(task.result.user)
+                    moveMainPage(task.result?.user)
                 }
                 else{
 //                    Show the error message

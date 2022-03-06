@@ -5,10 +5,14 @@
       <map>
         <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/activity_add_photo.xml" value="0.21739130434782608" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/activity_comment.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/fragment_alarm.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/fragment_detail.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/fragment_grid.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/fragment_user.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/item_comment.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/layout/item_detail.xml" value="0.264" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/Instagram_clone_1/app/src/main/res/menu/bottom_navigation_main.xml" value="0.25364583333333335" />
       </map>
     </option>

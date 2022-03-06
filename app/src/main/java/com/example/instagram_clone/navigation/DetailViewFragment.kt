@@ -74,7 +74,7 @@ class DetailViewFragment : Fragment() {
             var uid = FirebaseAuth.getInstance().currentUser?.uid
             firestore?.collection("users")?.document(uid!!)?.get()?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    var userDTO = task.result.toObject(FollowDTO::class.java)
+                    var userDTO = task.result?.toObject(FollowDTO::class.java)
                     if (userDTO?.followings != null) {
                         getCotents(userDTO?.followings)
                     }
@@ -83,7 +83,8 @@ class DetailViewFragment : Fragment() {
         }
 
         fun getCotents(followers: MutableMap<String, Boolean>?) {
-            imagesSnapshot = firestore?.collection("images")?.orderBy("timestamp")?.addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+            imagesSnapshot = firestore?.collection("images")?.orderBy("timestamp")?.addSnapshotListener {
+                    querySnapshot, firebaseFirestoreException ->
                 contentDTOs.clear()
                 contentUidList.clear()
                 if (querySnapshot == null) return@addSnapshotListener
@@ -116,7 +117,7 @@ class DetailViewFragment : Fragment() {
                 ?.get()?.addOnCompleteListener { task ->
                     if (task.isSuccessful) {
 
-                        val url = task.result["image"]
+                        val url = task.result?.get("image")
                         Glide.with(holder.itemView.context)
                             .load(url)
                             .apply(RequestOptions().circleCrop()).into(viewHolder.detailviewitem_profile_image)

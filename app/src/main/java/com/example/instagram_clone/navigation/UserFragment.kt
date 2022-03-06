@@ -66,7 +66,7 @@ class UserFragment : Fragment() {
             }
         }
         fragmentView?.account_reyclerview?.adapter = UserFragmentRecyclerViewAdapter()
-        fragmentView?.account_reyclerview?.layoutManager = GridLayoutManager(activity!!, 3)
+        fragmentView?.account_reyclerview?.layoutManager = GridLayoutManager(requireActivity(), 3)
 
         fragmentView?.account_iv_profile?.setOnClickListener {
             var photoPickerIntent = Intent(Intent.ACTION_PICK)
@@ -90,7 +90,7 @@ class UserFragment : Fragment() {
                     fragmentView?.account_btn_follow_signout?.text = getString(R.string.follow_cancel)
                     fragmentView?.account_btn_follow_signout?.background
                         ?.setColorFilter(
-                            ContextCompat.getColor(activity!!,R.color.colorLightGray),
+                            ContextCompat.getColor(requireActivity(),R.color.colorLightGray),
                             PorterDuff.Mode.MULTIPLY)
                 }else{
                     if(uid != currentUserUid){
@@ -174,7 +174,7 @@ class UserFragment : Fragment() {
             if(documentSnapshot == null) return@addSnapshotListener
             if(documentSnapshot.data != null){
                 var url = documentSnapshot?.data!!["image"]
-                Glide.with(activity!!).load(url).apply(RequestOptions().circleCrop()).into(fragmentView?.account_iv_profile!!)
+                Glide.with(requireActivity()).load(url).apply(RequestOptions().circleCrop()).into(fragmentView?.account_iv_profile!!)
             }
         }
     }
