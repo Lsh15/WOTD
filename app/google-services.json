@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "944276210498",
-    "project_id": "instagram-clone-11c7e",
-    "storage_bucket": "instagram-clone-11c7e.appspot.com"
+    "project_number": "698882985452",
+    "project_id": "workoutoftheday-4a5e8",
+    "storage_bucket": "workoutoftheday-4a5e8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:944276210498:android:325aebae6aef86baae3edb",
+        "mobilesdk_app_id": "1:698882985452:android:eda83ec6755fcaab2dc4c9",
         "android_client_info": {
-          "package_name": "com.example.instagram_clone"
+          "package_name": "com.example.WOTD"
         }
       },
       "oauth_client": [
         {
-          "client_id": "944276210498-jrrb5o54iq99gdgjjulprvuf0mopkrdc.apps.googleusercontent.com",
+          "client_id": "698882985452-ed8cakr7ip3i59cs8k541t3jdiut5k3j.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCpTQE2Dgroxam3BtlMkrrX3wAMR7cjbR0"
+          "current_key": "AIzaSyAFUottxnYknv_FWfmFWQRlNpczfT19NL4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "944276210498-jrrb5o54iq99gdgjjulprvuf0mopkrdc.apps.googleusercontent.com",
+              "client_id": "698882985452-ed8cakr7ip3i59cs8k541t3jdiut5k3j.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
